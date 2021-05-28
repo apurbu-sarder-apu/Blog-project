@@ -42,7 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'App_Blog',
     'App_Login',
+    'crispy_forms',
+    'django_cleanup.apps.CleanupConfig',
+
 ]
+
+
+# bootstrap, bootstrap3, bootstrap4, bootstrap5, uni-form
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -110,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
 
 USE_I18N = True
 
@@ -129,6 +137,9 @@ STATICFILES_DIRS = [STATIC_DIR,]
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
+
+
+LOGIN_URL = '/account/login'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
